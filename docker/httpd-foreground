@@ -1,0 +1,19 @@
+#!/bin/sh
+set -e
+
+# Avoid that people pick easy to guess filenames to store the flag
+date
+echo "Pick a better filename" > /tmp/better_filename
+/makelinks /tmp/better_filename
+
+words="flag Flag FLAG test Test TEST chal Chal CHAL"
+for w in $words;
+do
+    ln -sf /tmp/better_filename /tmp/$w
+done
+
+date
+# Apache gets grumpy about PID files pre-existing
+rm -f /usr/local/apache2/logs/httpd.pid
+
+exec httpd -DFOREGROUND "$@"

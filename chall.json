@@ -1,0 +1,17 @@
+{
+    "name": "retro",
+    "short_name": "",
+    "flag": "ebb1d7808ec033c2fc0cba0829863b66",
+    "category": "web",
+    "tags": ["web"],
+    "points": 100,
+    "info": "Check out my homepage in cyber space",
+    "author": "Steven",
+    "author_url": "https://twitter.com/StevenVanAcker",
+	"play_url": "http://localhost:1997",
+    "download_url": "",
+    "status_check": {
+        "enabled": false,
+        "targets": [""]
+    }
+}
